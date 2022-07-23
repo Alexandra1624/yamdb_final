@@ -28,11 +28,11 @@ jobs:
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
-    - name: Go to Dockerfile
-      run: |
-        cd api_yamdb
     needs: tests
     steps:
+      - name: Go to Dockerfile
+        run: |
+          cd api_yamdb
       - name: Check out the repo
         uses: actions/checkout@v2
       - name: Set up Docker Buildx
