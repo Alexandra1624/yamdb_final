@@ -20,44 +20,23 @@
 git clone https://github.com/Alexandra1624/yamdb_final
 ```
 
-2. **Cоздать и активировать виртуальное окружение:**
-```sh
-python -m venv venv
-source venv/Scripts/activate
-```
 
-3. **Обновить pip и установить зависимости из файла requirements.txt:**
+2. **Создайте файл .env с переменными окружения для работы с базой данных:**
 ```sh
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-4. **Выполнить миграции:**
-```sh
-cd yatube_api
-python manage.py migrate
-```
-
-5. **Создать суперпользователя:**
-```sh
-python manage.py createsuperuser
-```
-
-6. **Проверка тестов:**
-```sh
-pytest
-```
-
-7. **Запустить проект:**
-```sh
-python manage.py runserver
+SECRET_KEY=secret_key # секретный ключ для работы settings.py
+DB_ENGINE=django.db.backends.postgresql # указываем, что работаем с postgresql
+DB_NAME=postgres # имя базы данных
+POSTGRES_USER=postgres # логин для подключения к базе данных
+POSTGRES_PASSWORD=postgres # пароль для подключения к БД (установите свой)
+DB_HOST=db # название сервиса (контейнера)
+DB_PORT=5432 # порт для подключения к БД
 ```
 Сервер запущен на странице:     
-http://localhost:8000       
+http://84.201.137.34       
 Спецификация и эндпоинты доступны в документации:       
-http://localhost:8000/redoc/
+http://84.201.137.34/redoc/
 
-## Авторы
+## Автор
 
 **_Александра Радионова_**      
 https://github.com/Alexandra1624        
