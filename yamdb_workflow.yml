@@ -23,7 +23,7 @@ jobs:
     - name: Test with flake8 and django tests
       run: |
         python -m flake8
-      #  pytest
+        pytest
 
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
@@ -57,7 +57,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
-        stack_file_name: docker-compose.yaml
+        context: infra
         script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final
             sudo docker-compose stop
