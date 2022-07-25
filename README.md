@@ -42,5 +42,5 @@ http://62.84.120.234/redoc/
 
 **_Александра Радионова_**      
 https://github.com/Alexandra1624        
-https://t.me/alexandra_R1624        
+https://t.me/alexandra_R1624            
 sashamain@yandex.ru
